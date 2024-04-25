@@ -4,7 +4,7 @@
   let i = index;
   let isFirst = first
   let isLast = last
-  " class="list-group-item" [ngClass]="{
+  " class="list-group-item d-flex justify-content-between" [ngClass]="{
     'list-group-item-dark':isLast,
     'list-group-item-success':isFirst,
 
@@ -16,7 +16,7 @@
       <span>{{character.power}} </span>
 
     </div>
-    <button class="btn btn-danger">x</button>
+    <button (click)="onDeleteCharacter(character.id)" class="btn btn-danger">x</button>
   </li>
   <!-- <li class="list-group-item">Goku - 10000</li> -->
 </ul>

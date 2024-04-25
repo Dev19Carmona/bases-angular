@@ -4,7 +4,7 @@
   <div class="col">
     <h4>Listado</h4>
     <!-- <app-list-dbz [characterList]="characters"></app-list-dbz> -->
-    <app-list-dbz [characterList]="characters"/>
+    <app-list-dbz (onDelete)="onDeleteCharacter($event)" [characterList]="characters"/>
   </div>
   <div class="col">
     <h4>Agregar Personaje</h4>
