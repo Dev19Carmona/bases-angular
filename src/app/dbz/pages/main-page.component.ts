@@ -21,8 +21,12 @@ export class MainDbzComponent {
       power: 7500
     },
   ]
-  onNewCharacter( character:Character ):void{
-    console.log({character});
+  onNewCharacter(character: Character): void {
+    if (character.name !== '' && !this.characters.includes(character)) {
+      
+      this.characters.unshift(character)
+
+    }
 
   }
 }

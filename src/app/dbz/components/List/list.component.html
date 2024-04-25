@@ -1,23 +1,22 @@
-<ul class="list-group">
-  <li
-  *ngFor="
+<ul class="list-group d-flex justify-content-between">
+  <li *ngFor="
   let character of characterList;
   let i = index;
   let isFirst = first
   let isLast = last
-  "
-  class="list-group-item"
-  [ngClass]="{
+  " class="list-group-item" [ngClass]="{
     'list-group-item-dark':isLast,
     'list-group-item-success':isFirst,
 
-    }"
-  >
-    <span class="text-primary"> {{i + 1}}. </span>
-    <span>{{character.name}} - </span>
-    <strong>Power: </strong>
-    <span>{{character.power}} </span>
+    }">
+    <div>
+      <span class="text-primary"> {{i + 1}}. </span>
+      <span>{{character.name}} - </span>
+      <strong>Power: </strong>
+      <span>{{character.power}} </span>
 
+    </div>
+    <button class="btn btn-danger">x</button>
   </li>
   <!-- <li class="list-group-item">Goku - 10000</li> -->
 </ul>
